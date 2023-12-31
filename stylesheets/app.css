@@ -67,6 +67,7 @@ body.light{
     width: calc(4*0.625rem);
     height: calc(4*0.625rem);
     rotate: -90deg;
+    animation: backtotop-anim 1s infinite cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .back-to-top-wrapper > a{
@@ -78,6 +79,15 @@ body.light{
     border-radius: 0.625rem;
     background-color: var(--dark-border-secondary-color);
     color: var(--dark-bg-color);
+}
+
+@keyframes backtotop-anim{
+    0%{
+        translate: 0 0;
+    }
+    100%{
+        translate: 0 15%;
+    }
 }
 
 @media screen and (min-width: 785px){
