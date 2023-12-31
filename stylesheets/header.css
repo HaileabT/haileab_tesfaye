@@ -24,6 +24,7 @@
     max-width: 30px;
     min-width: 5%;
     fill: var(--dark-headings-color);
+    transition: 0.6s  cubic-bezier(1,0.01,0.32,1);
 }
 
 
@@ -43,6 +44,7 @@
     text-decoration: none;
     color: var(--dark-paragraph-color);
     font-size: 0.7rem;
+    transition: 0.4s  cubic-bezier(1,0.01,0.32,1);
 }
 
 .header-menu-btn{
@@ -72,8 +74,26 @@
     grid-area: one;
 }
 .welcome-title{
-    color: var(--dark-headings-color);
+    position: relative;
+    color: var(--dark-special-heading);
     font-size: 1.5rem;
+}
+
+.welcome-title::before{
+    position: absolute;
+    content: 'Hi';
+    filter: blur(12px);
+    opacity: 0.7;
+    animation: welcome-blur-rotate 3s infinite linear;
+}
+
+@keyframes welcome-blur-rotate{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
 }
 
 .welcome-body{
@@ -96,7 +116,7 @@
 
 .project-links-ul{
     list-style: none;
-    padding-left: 20px;
+    padding-left: calc(2 * 0.625rem);
     box-sizing: border-box;
 }
 .project-links-ul > li > a{
@@ -119,7 +139,7 @@
     height: 100%;
     position: absolute;
     width: 1%;
-    left: -20px;
+    left: calc(-1 * 2 * 0.625rem);
     z-index: -1;
     transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -155,7 +175,7 @@
     }
     .header-dashboard{
         grid-template-areas: "one two";
-        column-gap: 30px;
+        column-gap: calc(5 * 0.625rem);
         justify-self: center;
     }
     .dashboard-projects-wrapper{
@@ -169,5 +189,15 @@
     .project-list-item:focus a{
         width: 130%;
         
+    }
+}
+
+@media all and (hover: hover){
+    .logo:hover{
+       fill: var(--dark-secondary-color);
+        scale: 1.5;
+    }
+    .page-header-list-item a:hover{
+        color: var(--dark-secondary-color);
     }
 }

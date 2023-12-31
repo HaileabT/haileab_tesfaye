@@ -7,6 +7,7 @@
 
     --dark-bg-color: #2d2335;
     --dark-headings-color: #ded3aa;
+    --dark-special-heading: #2cc3ff;
     --dark-special-container-color: #37b496;
     --dark-paragraph-color: #e2f0fd;
     --dark-secondary-color: #fe6f39;
@@ -37,7 +38,7 @@ body{
 }
 
 
-@media screen and (min-width: 750px){
+@media screen and (min-width: 785px){
     html{
         font-size: 120%;
     }
@@ -46,5 +47,12 @@ body{
 @media screen and (max-width: 376px){
     html{
         font-size: 60%;
+    }
+}
+
+
+@media screen and (max-width: 250px){
+    html{
+        font-size: 40%;
     }
 }
