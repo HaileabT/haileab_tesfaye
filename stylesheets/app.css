@@ -60,6 +60,26 @@ body.light{
 }
 
 
+.back-to-top-wrapper{
+    position: fixed;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    width: calc(4*0.625rem);
+    height: calc(4*0.625rem);
+    rotate: -90deg;
+}
+
+.back-to-top-wrapper > a{
+    text-decoration: none;
+    padding: calc(1.5*0.625rem);
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 0.625rem;
+    background-color: var(--dark-border-secondary-color);
+    color: var(--dark-bg-color);
+}
+
 @media screen and (min-width: 785px){
     html{
         font-size: 120%;
