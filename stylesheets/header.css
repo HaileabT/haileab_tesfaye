@@ -2,7 +2,7 @@
     display:grid;
     /* padding: 50px; */
     margin: 30px;
-    padding: 50px;
+    padding: calc(5 * 0.625rem);
     height: calc(100vh - 60px);
     grid-template-rows: max-content 1fr;
     grid-template-areas: 
@@ -47,7 +47,7 @@
 
 .header-menu-btn{
     width: max-content;
-    padding: 5px 20px;
+    padding: 5px calc(0.625 * 2rem);
     font-weight: bold;
     justify-self: end;
     cursor: pointer;
@@ -162,4 +162,12 @@
         margin-top: 0px;
     }
         
+}
+
+
+@media all and (hover: none){
+    .project-list-item:focus a{
+        width: 130%;
+        
+    }
 }
