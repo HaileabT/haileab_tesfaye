@@ -1,6 +1,40 @@
 const menuBtn = document.getElementById("header-menu-btn");
 const mobileNav = document.querySelector(".mobile-header-nav-wrapper");
 const projectLinks = document.querySelectorAll("a");
+const offPageEl = document.querySelectorAll(".off-first-view");
+let isScrollingDown = false;
+let scrollY = 0;
+window.addEventListener('scroll', () => {
+    if (scrollY < window.scrollY){
+        isScrollingDown = true;
+    }
+    else if (scrollY > window.scrollY){
+        isScrollingDown = false;
+    }
+    scrollY = window.scrollY;
+});
+const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+        
+        if (entry.isIntersecting && isScrollingDown){
+            entry.target.style.top = "200px";
+            entry.target.style.opacity = "20%";
+            entry.target.style["animation-delay"] = `${index * 0.2}s` 
+            entry.target.classList.add("slide-in");
+        }
+        entry.target.addEventListener("animationend", () => {
+            entry.target.classList.remove("slide-in");
+            entry.target.style.top = "0";
+            entry.target.style.opacity = "100%";
+        })
+    })
+})
+
+
+
+        offPageEl.forEach(element => observer.observe(element));
+
+
 
 let botStrip;
 

@@ -13,7 +13,7 @@
     border: solid var(--dark-border-secondary-color);
     border-radius: 10px;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.367);
+    background-color: var(--dark-transparent-bg);
 }
 
 .light{
@@ -113,7 +113,7 @@
 .welcome-title{
     position: relative;
     color: var(--dark-special-heading);
-    font-size: 1.5rem;
+    font-size: var(--heading-title-size);
 }
 
 .welcome-title::before{
@@ -136,7 +136,7 @@
 .welcome-body{
     margin-top: 10px;
     color: var(--dark-paragraph-color);
-    font-size: 0.7rem;
+    font-size: var(--paragraph-font-size);
 }
 
 .header-welcome-article strong{
@@ -156,7 +156,7 @@
 
 .dashboard-projects-title{
     color: var(--dark-headings-color);
-    font-size: 1.1rem;
+    font-size: var(--heading2-title-size);
 }
 
 .project-links-ul{
@@ -183,7 +183,7 @@
     background-color: var(--dark-secondary-color-a-before);
     height: 100%;
     position: absolute;
-    width: 1%;
+    width: 1px;
     left: calc(-1 * 2 * 0.625rem);
     z-index: -1;
     transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);

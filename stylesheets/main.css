@@ -1,0 +1,110 @@
+.body-skills-section{
+    margin-top: calc(10 * 0.625rem);
+    margin-bottom: calc(10 * 0.625rem);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--dark-secondary-color);
+    padding: calc(3 * 0.625rem) calc(0.3 * 0.625rem);
+}
+
+.body-skills-section > div{
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--dark-bg-color);
+}
+
+.body-projects-section{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(5 * 0.625rem);
+    margin-bottom: calc(5 * 0.625rem);
+    position: relative;
+}
+
+
+.section-title{
+    margin-bottom: calc(3 * 0.625rem);
+    text-align: center;
+    color: var(--dark-secondary-color);
+}
+
+.project-wrapper:not(:last-of-type){
+    margin-bottom: calc(2 * 0.625rem);
+}
+
+.project-wrapper:nth-of-type(2n){
+    margin-left: auto;
+}
+.project-wrapper{
+    position: relative;
+    border: solid 1px;
+    border-color: var(--dark-secondary-color);
+    border-radius: 0.625rem;
+    width: 45%;
+    background-color: var(--dark-transparent-bg);
+    top: 200px;
+    opacity: 20%;
+    overflow: hidden;
+}
+
+.slide-in{
+    animation: off-page-slide-in 0.5s 1 cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes off-page-slide-in{
+    0%{
+        top: 200px;
+        opacity: 20%;
+    }
+    100%{
+        top: 0;
+        opacity: 100%;
+    }
+}
+
+.project-wrapper > h2{
+    padding: 0 calc(2 * 0.625rem);
+    padding-top: calc(2 * 0.625rem);
+    color: var(--dark-headings-color);
+    font-size: var(--heading2-title-size);
+}
+
+.project-wrapper > p{
+    padding: 0 calc(2 * 0.625rem);
+    padding-bottom: calc(2 * 0.625rem);
+    margin-top: 0.625rem;
+    color: var(--dark-paragraph-color);
+    font-size: var(--paragraph-font-size);
+}
+
+.project-wrapper > img{
+    
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+
+
+
+
+
+@media screen and (max-width: 750px){
+    .body-skills-section > div{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 650px){
+    .project-wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+@media screen and (max-width: 500px){
+    .body-skills-section > div{
+        font-size: 1.2rem;
+    }
+}

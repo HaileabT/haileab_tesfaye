@@ -19,7 +19,12 @@
     --dark-border-secondary-color: #fe6f39;
     --dark-links-color: #7611c4;
     --dark-links-secondary-color: #7611c4;
+    --dark-transparent-bg: rgba(0, 0, 0, 0.207);
 
+
+    --heading-title-size: 1.5rem;
+    --heading2-title-size: 1.1rem;
+    --paragraph-font-size: 0.7rem;
 
     /* #feffff -- background color secondary */
     /* #4945c0 -- dis a second headings  */
@@ -33,6 +38,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Poppins;
+    scroll-behavior: smooth;
 }
 
 html{
@@ -57,6 +63,7 @@ body.light{
     --dark-secondary-color-mobile-links: black;
     --dark-border-secondary-color: rgb(17, 17, 17);
     --dark-strip-bg-color: rgb(17, 17, 17);
+    --dark-transparent-bg: rgba(0, 0, 0, 0.0);
 }
 
 
