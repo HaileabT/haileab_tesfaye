@@ -5,11 +5,13 @@
     /* #e2f0fd -- primary paragraphs */
     /* #d2fb51 -- primary special */
 
-    --dark-bg-color: #252c29;
-    --dark-headings-color: #fffefe;
-    --dark-special-container-color: #0ebcd2;
+    --dark-bg-color: #2d2335;
+    --dark-headings-color: #ded3aa;
+    --dark-special-container-color: #37b496;
     --dark-paragraph-color: #e2f0fd;
-    --dark-secondary-color: #d2fb51;
+    --dark-secondary-color: #fe6f39;
+    --dark-links-color: #7611c4;
+    --dark-links-secondary-color: #7611c4;
 
 
     /* #feffff -- background color secondary */
@@ -26,12 +28,17 @@
     font-family: Poppins;
 }
 
+html{
+    font-size: 100%;
+}
+
 body{
     background-color: var(--dark-bg-color);
 }
 
 
-
 @media screen and (min-width: 750px){
-
+    html{
+        font-size: 120%;
+    }
 }

@@ -14,12 +14,22 @@
     background-color: rgba(0, 0, 0, 0.367);
 }
 
+
+
 .page-header-logo-wrapper{
     grid-area: one;
 }
 
+.logo{
+    max-width: 30px;
+    min-width: 5%;
+    fill: var(--dark-headings-color);
+}
+
+
 .page-header-nav-wrapper{
     grid-area: two;
+    display: none;
 }
 
 .page-header-nav-ul{
@@ -28,6 +38,24 @@
     gap: 10px;
     list-style-type: none;
 }
+
+.page-header-list-item a{
+    text-decoration: none;
+    color: var(--dark-paragraph-color);
+    font-size: 0.7rem;
+}
+
+.header-menu-btn{
+    width: max-content;
+    padding: 5px 20px;
+    font-weight: bold;
+    justify-self: end;
+    cursor: pointer;
+    background-color: var(--dark-secondary-color);
+    border: none;
+    border-radius: 5px;
+}
+
 .header-dashboard{
     grid-area: three;
     display: grid;
@@ -43,19 +71,95 @@
 .header-welcome-article{
     grid-area: one;
 }
+.welcome-title{
+    color: var(--dark-headings-color);
+    font-size: 1.5rem;
+}
+
+.welcome-body{
+    margin-top: 10px;
+    color: var(--dark-paragraph-color);
+    font-size: 0.7rem;
+}
+
 
 .dashboard-projects-wrapper{
     grid-area: two;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
-.logo{
-    min-width: 15px;
-    max-width: 5%;
-    fill: var(--dark-headings-color);
+.dashboard-projects-title{
+    color: var(--dark-headings-color);
+    font-size: 1.1rem;
+}
+
+.project-links-ul{
+    list-style: none;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.project-links-ul > li > a{
+    position: relative;
+    text-decoration: none;
+    color: var(--dark-secondary-color);
+    font-size: 0.8rem;
+    z-index: 100;
+    transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.project-list-item{
+    display: flex;
+    align-items: center;
+}
+
+.project-list-item > a:before{
+    content: '';
+    background-color: var(--dark-secondary-color);
+    height: 100%;
+    position: absolute;
+    width: 1%;
+    left: -20px;
+    z-index: -1;
+    transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.project-list-item:hover a {
+    color: var(--dark-headings-color);
+}
+
+.project-list-item:hover a:before{
+    width: 130%;
+    
 }
 
 
 
 
+.hidden{
+    display: none;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 750px){
+    .header-menu-btn{
+        display: none;
+    }
+    .page-header-nav-wrapper{
+        display: block;
+    }
+    .header-dashboard{
+        grid-template-areas: "one two";
+        column-gap: 30px;
+        justify-self: center;
+    }
+    .dashboard-projects-wrapper{
+        margin-top: 0px;
+    }
+        
+}
