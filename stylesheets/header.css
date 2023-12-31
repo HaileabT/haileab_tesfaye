@@ -10,10 +10,14 @@
     grid-template-areas: 
     "one two"
     "three three";
-    border: solid var(--dark-secondary-color);
+    border: solid var(--dark-border-secondary-color);
     border-radius: 10px;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.367);
+}
+
+.light{
+    background-color: transparent;
 }
 
 
@@ -135,6 +139,14 @@
     font-size: 0.7rem;
 }
 
+.header-welcome-article strong{
+    font-size: 0.8rem;
+}
+
+.biography-link{
+    text-decoration: none;
+    color: var(--dark-secondary-color-proj-links);
+}
 
 .dashboard-projects-wrapper{
     grid-area: two;
@@ -155,7 +167,7 @@
 .project-links-ul > li > a{
     position: relative;
     text-decoration: none;
-    color: var(--dark-secondary-color);
+    color: var(--dark-secondary-color-proj-links);
     font-size: 0.8rem;
     z-index: 100;
     transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -168,7 +180,7 @@
 
 .project-list-item > a:before{
     content: '';
-    background-color: var(--dark-secondary-color);
+    background-color: var(--dark-secondary-color-a-before);
     height: 100%;
     position: absolute;
     width: 1%;
@@ -178,7 +190,7 @@
 }
 
 .project-list-item:hover a {
-    color: var(--dark-headings-color);
+    color: var(--dark-a-hover);
 }
 
 .project-list-item:hover a:before{
@@ -186,16 +198,59 @@
     
 }
 
+.stylish-strip-bottom{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--dark-strip-bg-color);
+    height: calc(2.5 * 0.625rem);
+    /* padding: 5px calc(2 * 0.625rem); */
+    width: 100%;
+    gap: 20px;
+}
 
+.stylish-strip-bottom > div {
+    position: absolute;
+    white-space: nowrap;
+    padding-right: 30px;
+    bottom: calc(0.17 * 0.625rem);
+    font-weight: bold;
+    color: var(--dark-bg-color);
+    font-size: 0.7rem;
+}
 
-
-.hidden{
-    display: none;
+.stylish-strip-bottom div:nth-of-type(1){
+    translate: 0 0;
+}
+.stylish-strip-bottom div:nth-of-type(2){
+    translate: 100% 0;
 }
 
 
+.strip-out{
+    animation: strip-para-out 16s 1 linear;
+} 
+.strip-in{
+    animation: strip-para-in 16s 1 linear;
+}
 
 
+@keyframes strip-para-out{
+    0%{
+       translate: 0 0;
+    }
+    100%{
+        translate: -100% 0;
+    }
+}
+
+@keyframes strip-para-in{
+    0%{
+        translate: 100% 0;
+    }
+    100%{
+        translate: 0 0;
+    }
+}
 
 
 
@@ -237,7 +292,7 @@
         color: var(--dark-secondary-color);
     }
     .mobile-header-nav-ul .page-header-list-item a:hover{
-        color: var(--dark-special-heading);
+        color: var(--dark-secondary-color-mobile-links);
     }
 }
 
@@ -254,7 +309,7 @@
     }
 }
 
-@media screen and (max-width: 370px){
+@media screen and (max-width: 376px){
     .mobile-header-nav-wrapper{
         top: calc(0.625 * 11rem);
     }
