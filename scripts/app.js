@@ -2,6 +2,8 @@ const menuBtn = document.getElementById("header-menu-btn");
 const mobileNav = document.querySelector(".mobile-header-nav-wrapper");
 const projectLinks = document.querySelectorAll("a");
 const offPageEl = document.querySelectorAll(".off-first-view");
+const themeToggle = document.getElementById("theme-toggle-btn");
+themeToggle.children[0].children[1].classList.add("hide-theme-text");
 let isScrollingDown = false;
 let scrollY = 0;
 window.addEventListener('scroll', () => {
@@ -19,7 +21,7 @@ const observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting && isScrollingDown){
             entry.target.style.top = "200px";
             entry.target.style.opacity = "20%";
-            entry.target.style["animation-delay"] = `${index * 0.2}s` 
+            entry.target.style["animation-delay"] = `${index * 0.5}s` 
             entry.target.classList.add("slide-in");
         }
         entry.target.addEventListener("animationend", () => {
@@ -44,10 +46,12 @@ projectLinks.forEach(el => {
     }
 })
 
-document.body.onclick = e => {
+themeToggle.onclick = e => {
     e.stopPropagation();
     document.body.classList.toggle("light");
     document.querySelector(".page-main-header").classList.toggle("light");
+    themeToggle.children[0].children[0].classList.toggle("hide-theme-text");
+    themeToggle.children[0].children[1].classList.toggle("hide-theme-text");
 }
 
 botStrip = document.querySelector(".stylish-strip-bottom");
