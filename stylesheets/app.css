@@ -141,7 +141,7 @@ body.light{
 }
 @media screen and (max-width: 995px) and (orientation: landscape){
     html{
-        font-size: 80%;
+        font-size: 85%;
     }
 }
 
@@ -153,13 +153,13 @@ body.light{
 
 @media screen and (max-width: 376px){
     html{
-        font-size: 60%;
+        font-size: 75%;
     }
 }
 
 
 @media screen and (max-width: 250px){
     html{
-        font-size: 40%;
+        font-size: 55%;
     }
 }

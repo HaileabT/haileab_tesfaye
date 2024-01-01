@@ -334,6 +334,13 @@
     }
 }
 
+@media screen and (max-width: 995px) and (orientation: landscape){
+    .author-sign{
+        right:-3.3rem;
+    }
+}
+
+
 @media screen and (max-width: 750px) and (min-width: 500px){
     .mobile-header-nav-ul{
         gap: 15px;
@@ -351,10 +358,16 @@
     .mobile-header-nav-wrapper{
         top: calc(0.625 * 11rem);
     }
+    .author-sign{
+        right:-3.3rem;
+    }
 }
 
 @media screen and (max-width: 250px){
     .mobile-header-nav-wrapper{
         top: calc(0.625 * 13rem);
+    }
+    .author-sign{
+        right:-3.1rem;
     }
 }
