@@ -3,7 +3,7 @@
     position: relative;
     overflow: hidden;
     /* padding: 50px; */
-    margin: 30px;
+    margin: calc(3 * 0.625rem);
     padding: calc(5 * 0.625rem);
     height: calc(100vh - 60px);
     grid-template-rows: max-content 1fr;
