@@ -1,6 +1,6 @@
 .body-skills-section{
-    margin-top: calc(10 * 0.625rem);
-    margin-bottom: calc(10 * 0.625rem);
+    margin-top: calc(13 * 0.625rem);
+    /* margin-bottom: calc(10 * 0.625rem); */
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -18,8 +18,7 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: calc(5 * 0.625rem);
-    margin-bottom: calc(5 * 0.625rem);
+    margin-top: calc(13 * 0.625rem);
     position: relative;
 }
 
@@ -45,23 +44,41 @@
     width: 45%;
     height: max-content;
     background-color: var(--dark-transparent-bg);
-    top: 200px;
-    opacity: 20%;
+    top: 150px;
+    opacity: 0%;
     overflow: hidden;
 }
 
 .slide-in{
-    animation: off-page-slide-in 0.8s 1 linear;
+    top: 0;
+    opacity: 100%;
+    animation: off-page-slide-in 0.4s 1 linear;
+}
+.slide-out{
+    top: 150px;
+    opacity: 0%;
+    animation: off-page-slide-out 0.4s 1 linear;
 }
 
 @keyframes off-page-slide-in{
     0%{
-        top: 200px;
-        opacity: 5%;
+        top: 150px;
+        opacity: 0%;
     }
     100%{
         top: 0;
         opacity: 100%;
+    }
+}
+
+@keyframes off-page-slide-out{
+    0%{
+        top: 0px;
+        opacity: 100%;
+    }
+    100%{
+        top: 150px;
+        opacity: 0%;
     }
 }
 

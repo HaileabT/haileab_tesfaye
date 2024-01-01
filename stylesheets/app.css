@@ -39,7 +39,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Poppins;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -118,6 +118,23 @@ body.light{
 
 .hide-theme-text{
     display: none;
+}
+
+.left-nav-wrapper{
+    position: fixed;
+    z-index: 1000;
+    box-sizing: content-box;
+    transform: translate(0%, -50%);
+    top: 63%;
+    left: -100%;
+    rotate: -90deg;
+    transform-origin: 3%;
+    transition: 1s linear;
+}
+
+.left-nav-ul{
+    display: flex;
+    gap: calc(3 * 0.625rem);
 }
 
 

@@ -3,6 +3,18 @@ const mobileNav = document.querySelector(".mobile-header-nav-wrapper");
 const projectLinks = document.querySelectorAll("a");
 const offPageEl = document.querySelectorAll(".off-first-view");
 const themeToggle = document.getElementById("theme-toggle-btn");
+const leftNav = document.querySelector(".left-nav-wrapper");
+
+let toggleLeftNav = () =>{
+    if (window.scrollY >= window.innerHeight){
+        leftNav.style.left = "calc(2 * 0.625rem)"; 
+    }
+    else{
+        leftNav.style.left = "-100%";
+    }
+}
+
+setInterval(toggleLeftNav, 100);
 themeToggle.children[0].children[1].classList.add("hide-theme-text");
 let isScrollingDown = false;
 let scrollY = 0;
@@ -17,20 +29,17 @@ window.addEventListener('scroll', () => {
 });
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry, index) => {
-        
         if (entry.isIntersecting && isScrollingDown){
-            entry.target.style.top = "200px";
-            entry.target.style.opacity = "20%";
-            entry.target.style["animation-delay"] = `${index * 0.5}s` 
-            entry.target.classList.add("slide-in");
+            entry.target.classList.remove("slide-out");
+                entry.target.classList.add("slide-in");
         }
-        entry.target.addEventListener("animationend", () => {
+        let elBottom = entry.boundingClientRect.bottom > window.innerHeight;
+        if (!isScrollingDown && elBottom){
+            entry.target.classList.add("slide-out");
             entry.target.classList.remove("slide-in");
-            entry.target.style.top = "0";
-            entry.target.style.opacity = "100%";
-        })
+        }
     })
-})
+}, {threshold: 0.5})
 
 
 

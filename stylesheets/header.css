@@ -4,8 +4,9 @@
     overflow: hidden;
     /* padding: 50px; */
     margin: calc(3 * 0.625rem);
+    margin-bottom: 0;
     padding: calc(5 * 0.625rem);
-    height: calc(100vh - 60px);
+    height: calc(100vh - calc(6 * 0.625rem));
     grid-template-rows: max-content 1fr;
     grid-template-areas: 
     "one two"

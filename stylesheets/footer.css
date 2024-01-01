@@ -1,0 +1,82 @@
+.page-main-footer{
+    display:grid;
+    justify-items: center;
+    position: relative;
+    margin: calc(3 * 0.625rem);
+    margin-top: calc(15 * 0.625rem);;
+    padding: calc(5 * 0.625rem);
+    margin-bottom: 0;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas: 
+    "one one"
+    "two three"
+    "four four"
+    "five five";
+    border: solid var(--dark-border-secondary-color);
+    border-radius: 0.625rem 0.625rem 0 0;
+    border-bottom: none;
+    align-items: center;
+    background-color: var(--dark-transparent-bg);
+    row-gap: 0.625rem;
+}
+
+.footer-author-sign{
+    grid-area: five;
+    text-align: center;
+}
+
+.footer-author-sign > strong {
+    font-weight: light;
+    font-size: 0.6rem;
+    color: var(--);
+}
+
+.footer-author-sign > strong > a {
+    text-decoration: none;
+    color: var(--dark-secondary-color-a-before);
+}
+
+.page-main-footer > strong{
+    grid-area: four;
+    width: 100%;
+    text-align: right;
+    margin-top: calc(2 * 0.625rem);
+}
+.footer-logo-wrapper{
+    grid-area: one;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(2 * 0.625rem);
+}
+
+.footer-logo{
+    fill: var(--dark-headings-color);
+    width: 100%;
+}
+
+.footer-project-nav{
+    grid-area: two;
+    align-self: start;
+}
+
+.footer-nav-links{
+    grid-area: three;
+    align-self: start;
+}
+.footer-nav-title{
+    font-size: 0.9rem;
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+.footer-project-nav > ul > li, .footer-nav-links > ul > li {
+    margin-left: calc(2 * 0.625rem);
+}
+.footer-project-nav > ul > li > a, .footer-nav-links > ul > li > a {
+    text-decoration: none;
+    color: var(--dark-border-secondary-color);
+    font-size: 0.8rem;
+}
