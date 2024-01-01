@@ -168,7 +168,7 @@
     position: relative;
     text-decoration: none;
     color: var(--dark-secondary-color-proj-links);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     z-index: 100;
     transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -254,7 +254,7 @@
 
 .author-sign{
     position: fixed;
-    right:-4.6rem;
+    right:-6rem;
     font-size: 0.6rem;
     /* bottom: 50%; */
     rotate: -90deg;
@@ -336,7 +336,7 @@
 
 @media screen and (max-width: 995px) and (orientation: landscape){
     .author-sign{
-        right:-3.3rem;
+        right:-5.7rem;
     }
 }
 
@@ -359,7 +359,7 @@
         top: calc(0.625 * 11rem);
     }
     .author-sign{
-        right:-3.3rem;
+        right:-5.7rem;
     }
 }
 
@@ -368,6 +368,6 @@
         top: calc(0.625 * 13rem);
     }
     .author-sign{
-        right:-3.1rem;
+        right:-5.5rem;
     }
 }
