@@ -27,19 +27,18 @@ window.addEventListener('scroll', () => {
     }
     scrollY = window.scrollY;
 });
-const observer = new IntersectionObserver(entries => {
+
+let observeLogic = (entries, observera) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting && isScrollingDown){
             entry.target.classList.remove("slide-out");
                 entry.target.classList.add("slide-in");
-        }
-        let elBottom = entry.boundingClientRect.bottom > window.innerHeight;
-        if (!isScrollingDown && elBottom){
-            entry.target.classList.add("slide-out");
-            entry.target.classList.remove("slide-in");
+                observera.unobserve(entry.target);
         }
     })
-}, {threshold: 0.5})
+
+}
+const observer = new IntersectionObserver(observeLogic, {once: true, threshold: 0.5})
 
 
 
