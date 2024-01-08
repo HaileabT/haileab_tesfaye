@@ -28,7 +28,7 @@
 .footer-author-sign > strong {
     font-weight: light;
     font-size: 0.6rem;
-    color: var(--);
+    color: var(--dark-border-secondary-color);
 }
 
 .footer-author-sign > strong > a {
