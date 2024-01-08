@@ -22,6 +22,7 @@
     --dark-links-secondary-color: #7611c4;
     --dark-transparent-bg: rgba(0, 0, 0, 0.207);
     --shortcut-link-bg: rgba(0, 0, 0, 0.607);
+    --author-sign-color: white;
 
 
     --heading-title-size: 1.5rem;
@@ -68,6 +69,12 @@ body.light{
     --dark-strip-bg-color: rgb(17, 17, 17);
     --dark-transparent-bg: rgba(0, 0, 0, 0.0);
     --shortcut-link-bg: rgba(255, 255, 255, 0.607);
+    --author-sign-color: black;
+}
+
+
+nav > ul {
+    list-style-type: none;
 }
 
 
